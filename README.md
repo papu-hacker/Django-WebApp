@@ -15,8 +15,14 @@ This is a basic website built in django
     source ./.env/bin/activate
     ```
 
-3. To run :
+3. Install Depende... :
     ```bash
     pip install -r requirements.txt
     ```
 
+4. To Run:
+    ```bash
+    python manage.py runserver
+    ```
+
+## Then open url in browser http://localhost:8000/
