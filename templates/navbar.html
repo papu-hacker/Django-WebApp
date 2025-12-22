@@ -1,0 +1,50 @@
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+{% endblock %}
+
+{% block navbar %}
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <a class="navbar-brand" href="{% url 'homes:home' %}">Papu</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'homes:home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#fa-twitter">Contact</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">PenTesting</a>
+            <a class="dropdown-item" href="#">FreeLancing</a>
+            <div style="background-color: whitesmoke;" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Bug-Bounty</a>
+          </div>
+        </li>
+
+        {% comment %} <li>
+          <a class="nav-link" href="{% url 'homes:login' %}">Login</a>
+        </li> {% endcomment %}
+
+        {% if user.is_authenticated %}
+          {% comment %} <span class="navbar-text me-3 text-white">Hello, {{ user.username }}!</span> {% endcomment %}
+          <a class="nav-link" href="{% url 'homes:logout' %}">Logout</a>
+        {% else %}
+          <a class="nav-link" href="{% url 'homes:login' %}">Login</a>
+        {% endif %}
+
+        <li>
+          <a class="nav-link" href="{% url 'homes:register' %}">Register</a>
+        </li>
+        
+      </ul>
+    </div>
+  </nav>
+{% endblock %}

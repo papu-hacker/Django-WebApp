@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Papu - Register{% endblock title %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+{% endblock %}
+
+{% block body_code %}
+<!-- <style>
+    .reg-con{
+        background-color: #282828;
+    }
+    /* Background wrapper */
+    .register-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #111;
+        background: var(--color-bgcolor);
+    }
+
+    /* Main card */
+    .register-container {
+        width: 100%;
+        max-width: 420px;
+        padding: 2rem;
+        border-radius: 1.2rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Title */
+    .register-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        color: var(--color-accent);
+        text-shadow: 0 0 10px rgba(164, 185, 255, 0.2);
+    }
+
+    /* Form */
+    .register-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+    }
+
+    /* Label */
+    .form-group label {
+        display: block;
+        margin-bottom: 0.3rem;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--color-highlight-text);
+    }
+
+    /* Input field styling */
+    .form-group input {
+        width: 100%;
+        padding: 0.6rem 1rem;
+        border-radius: 0.6rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.05);
+        outline: none;
+        font-size: 1rem;
+        color: var(--color-textcol);
+    }
+
+    .form-group input::placeholder {
+        color: rgba(200, 200, 200, 0.5);
+    }
+
+    /* Focus styles */
+    .form-group input:focus {
+        border-color: var(--color-accent);
+        box-shadow: 0 0 0 2px var(--color-accent);
+    }
+
+    /* Button */
+    .register-btn {
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0.7rem;
+        border: none;
+        border-radius: 0.6rem;
+        font-weight: 600;
+        color: #111;
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .register-btn:hover {
+        background: var(--color-secondry-color);
+        transform: scale(1.02);
+    }
+
+    /* Login text */
+    .login-text {
+        text-align: center;
+        margin-top: 1.2rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .login-text a {
+        color: var(--color-highlight-text);
+        text-decoration: none;
+    }
+
+    .login-text a:hover {
+        text-decoration: underline;
+    }
+</style> -->
+
+<div class="register-wrapper">
+    <div class="register-container">
+        <h1 class="register-title">Create Account</h1>
+        <hr class="reg-t-un">
+
+        <form action="{% url 'homes:register' %}" method="POST" class="register-form">
+            {% csrf_token %}
+            <!-- username -->
+            <div class="form-group">
+                <label class="label-reg" for="username">User Name</label><br>
+                <input class="input-b" type="text" id="username" name="username" placeholder="Enter your username" required />
+            </div>
+            <!-- First Name -->
+            <div class="form-group">
+                <label class="label-reg" for="first_name">First Name</label><br>
+                <input class="input-b" type="text" id="first_name" name="first_name" placeholder="Enter your first name" required />
+            </div>
+            <!-- Last Name -->
+            <div class="form-group">
+                <label class="label-reg" for="last_name">Last Name</label><br>
+                <input class="input-b" type="text" id="last_name" name="last_name" placeholder="Enter your last name" required />
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+                <label class="label-reg" for="email">Email</label><br>
+                <input class="input-b" type="email" id="email" name="email" placeholder="Enter your email address" required />
+            </div>
+            <!-- Password -->
+            <div class="form-group">
+                <label class="label-reg" for="password">Password</label><br>
+                <input class="input-b" type="password" id="password" name="password" placeholder="Enter your password" required />
+            </div>
+            <!-- Phone -->
+            <div class="form-group">
+                <label class="label-reg" for="phone">Phone Number</label><br>
+                <input class="input-b" type="tel" id="phone" name="phone" placeholder="e.g. 9876543210" pattern="[0-9]{10}" required />
+            </div>
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+
+        <p class="login-text">
+            Already have an account?
+            <a class="lg-lnk" href="{% url 'homes:login' %}">Login</a>
+        </p>
+    </div>
+</div>
+
+{% endblock %}

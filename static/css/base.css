@@ -1,0 +1,161 @@
+* {
+    font-family: IBM Plex Mono;
+}
+
+.base-body {
+    background-color: #1c1c1c;
+}
+
+.copy-bg {
+    background-color: rgba(0, 0, 0, 0.438)
+}
+
+.copy-lnk {
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.copy-lnk:hover {
+    text-shadow: 0 0 8px rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+.footer-css{
+    color: white;
+}
+
+.footer-css a {
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-css a:hover{
+    text-decoration: underline;
+    /* text-shadow: 0 0 10px white; */
+}
+
+.fab {
+    transition: 0.3s ease;
+}
+
+.fab:hover {
+    text-shadow: 0 0 14px rgb(255, 237, 78);
+}
+
+.footer-title {
+    max-height: 20px;
+}
+
+/* --------------------------Nav_bar--------------------------------- */
+
+/* Nav-Bar */
+.navbar-custom {
+    background-color: #6351ce;
+    /* justify-content: center; */
+    width: 70%;
+    /* You can adjust this width as per your needs */
+    max-width: 950px;
+    /* Max width to prevent it from growing too wide */
+    margin: 0 auto;
+    /* Center the navbar */
+    padding-left: 0;
+    /* Remove padding on left side */
+    padding-right: 0;
+    /* Remove padding on right side */
+    border-radius: 16px;
+}
+
+.navbar {
+    margin-top: 16px;
+    justify-content: right;
+}
+
+.navbar-nav {
+    justify-content: center;
+    /* Center the items within the navbar */
+    width: 90%;
+    /* Ensure the navbar items span the full width of the navbar */
+}
+
+
+.navbar-toggler {
+    border-color: transparent;
+}
+
+.navbar-custom .nav-link {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.navbar-custom .navbar-brand {
+    /* color: #713eff; */
+    color: black;
+    font-weight: 800;
+    font-size: 26px;
+    margin-left: 18px;
+    background-color: #1eff00;
+    border: none;
+    border-radius: 10px;
+    padding: 14px;
+    padding-top: 0px;
+    padding-bottom: 2px;
+    transition: 0.3s ease;
+}
+
+.navbar-custom .navbar-brand:hover {
+    box-shadow: 0px 1px 16px 5px rgb(48, 255, 33);
+    color: white;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #1eff00;
+}
+
+/* dropdown For Bootstrap 5 */
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    background-color: #342a6b;
+}
+
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(10px);
+    /* Adjust as needed for desired animation */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover>.dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    color: #1eff00;
+}
+
+.dropdown .dropdown-menu .dropdown-item {
+    color: #ffffff;
+}
+
+.dropdown .dropdown-menu .dropdown-item:hover {
+    color: #1eff00;
+    background-color: rgba(128, 128, 128, 0.158);
+    border-radius: 10px;
+    transition: 0.3s;
+    text-shadow: 1px 3px 16px #42ff29;
+}
+
+.alert-warpper{
+    margin-top: 1.9em;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    /* max-width: 700px; */
+    max-width: 100%;
+}
+
+.alert {
+    /* border: 2px solid black; */
+    border: none;
+    /* padding: auto 10em; */
+    background-color: rgb(50, 50, 50);
+    color: white;
+}

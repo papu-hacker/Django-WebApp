@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Papu - Login
+{% endblock %}
+
+{% block css %}
+  <link href="{% static 'css/login.css' %}" rel="stylesheet" />
+{% endblock %}
+
+{% block body_code %}
+  <div class="container login-wrapper">
+    <div class="login-card">
+      <h2 class="login-title">Login</h2>
+
+      <form method="POST" action="{% url 'homes:login' %}">
+        {% csrf_token %}
+
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-control" name="username" placeholder="Username" required />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="Password" required />
+        </div>
+
+        <button type="submit" class="btn btn-login w-100 mt-2">Sign In</button>
+      </form>
+
+      <p class="text-center mt-3">
+        <a href="{% url 'homes:register' %}" class="login-link">Create New Account</a>
+      </p>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,113 @@
+/* #home-body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1c1c1c;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+} */
+
+h1, h2 {
+    color: #9546ef;
+    /* Neon green */
+    text-align: center;
+    /* text-transform: uppercase; */
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    color: #ccc;
+    margin: 20px 0;
+}
+
+.content-container {
+    padding: 40px 10%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #1c1c1c;
+}
+
+.intro-text {
+    margin-top: 30px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+.intro-text:hover {
+    box-shadow: 0px 0px 30px 4px rgb(255, 241, 183);
+}
+
+.highlight-text {
+    color: #ff4500;
+    /* Neon orange for emphasis */
+    font-weight: bold;
+}
+
+.section {
+    margin-top: 40px;
+    border-top: 2px solid #00ff00;
+    padding-top: 40px;
+    color: white;
+}
+
+
+.cta-button {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background-color: #00ff00;
+    border: none;
+    padding: 12px 30px;
+    color: #1c1c1c;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #9dff00;
+    box-shadow: 1px 1px 16px 2px #734dff;
+    transition: 0.2s;
+}
+
+.flickering-text {
+    animation: flicker 2.1s linear infinite;
+    /* Name, duration, timing, iteration */
+}
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+        opacity: 0.5;
+        /* Reduced opacity for a subtle flicker */
+    }
+
+    21%,
+    56% {
+        opacity: 0;
+        /* Completely hidden for a more pronounced flicker */
+    }
+}
+
+.flickering-text {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 20px #a43cff;
+}

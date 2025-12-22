@@ -1,0 +1,114 @@
+.login-wrapper {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: #151515;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 35px 30px;
+    width: 100%;
+    max-width: 380px;
+}
+
+.login-title {
+    color: blueviolet;
+    font-size: 2.1rem;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    animation: flicker 2s linear infinite;
+    /* Name, duration, timing, iteration */
+    text-shadow: 1px 1px 40px #9f44ff;
+    color: rgb(175, 90, 255);
+}
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+        opacity: 0.5;
+        /* Reduced opacity for a subtle flicker */
+    }
+
+    21%,
+    56% {
+        opacity: 0;
+        /* Completely hidden for a more pronounced flicker */
+    }
+}
+
+.form-control {
+    background-color: #0f0f0f;
+    border: 1px solid #2a2a2a;
+    color: white;
+}
+
+.form-control::placeholder{
+    color: rgb(127, 127, 127);
+    font-family: monospace;
+}
+
+.form-control:focus {
+    background: fixed;
+    /* border-color: blueviolet; */
+    border: 1px solid #c170ff;
+    box-shadow: none;
+    color: #fff;
+}
+
+.form-label {
+    color: #dadada;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn-login {
+    background: blueviolet;
+    border: none;
+    padding: 10px 0;
+    color: white;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.btn-login:hover {
+    background: blueviolet;
+    /* transform: translateY(-2px); */
+
+    box-shadow: 0 0 14px 4px blueviolet;
+    color: white;
+    text-shadow: 0 0 6px rgb(255, 255, 31);
+}
+
+.btn-login:focus {
+    background-color: #9f44ff;
+}
+
+.login-link {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.login-link:hover {
+    /* color: blueviolet; */
+    color: rgb(245, 232, 255);
+    text-decoration: underline;
+    text-shadow: 0 0 10px rgb(255, 240, 103);
+}
